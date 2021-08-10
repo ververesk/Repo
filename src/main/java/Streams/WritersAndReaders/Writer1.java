@@ -1,4 +1,4 @@
-package Streams.InputAndOuputStream.SortEvenNumbersFromFile;
+package Streams.WritersAndReaders;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -9,16 +9,18 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class Writer1 {
+
     public static void writeInFile(File file) {
 
         try(FileWriter fileWriter=new FileWriter(file, true);
             BufferedWriter bufferedWriter=new BufferedWriter(fileWriter)) {
-//            List<Integer> list = new Random().ints(10, 1, 100).boxed().collect(Collectors.toList());
-//            for (Integer integer : list) {
-                bufferedWriter.write(1);
-
-
-
+            int [] array=new Random()
+                .ints(10,0,100)
+                .toArray();
+            for (int i = 0; i < array.length; i++) {
+                bufferedWriter.write(String.valueOf(array[i]));
+                bufferedWriter.write(System.lineSeparator());
+            }
             }
 
         catch (Exception e) {
