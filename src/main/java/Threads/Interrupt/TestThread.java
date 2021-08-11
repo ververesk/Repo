@@ -1,4 +1,4 @@
-package Interrupt;
+package Threads.Interrupt;
 
 public class TestThread {
     public static void main(String[] args) throws InterruptedException{

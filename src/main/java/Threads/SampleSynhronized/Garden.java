@@ -1,4 +1,4 @@
-package SampleSynhronized;
+package Threads.SampleSynhronized;
 
 import java.util.ArrayList;
 import java.util.List;

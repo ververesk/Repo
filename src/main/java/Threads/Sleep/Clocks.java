@@ -1,6 +1,4 @@
-package Sleep;
-
-import java.time.Clock;
+package Threads.Sleep;
 
 public class Clocks {
     public static volatile boolean isStopped=false;

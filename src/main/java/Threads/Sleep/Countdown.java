@@ -1,4 +1,4 @@
-package Sleep;
+package Threads.Sleep;
 
 import java.util.ArrayList;
 import java.util.List;

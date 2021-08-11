@@ -1,4 +1,4 @@
-package Sleep;
+package Threads.Sleep;
 
 public class StopWatch {
     public static volatile boolean isStopped=false;
