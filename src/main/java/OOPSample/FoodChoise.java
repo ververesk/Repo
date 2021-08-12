@@ -1,4 +1,4 @@
-package InstanceofSample;
+package OOPSample;
 
 public class FoodChoise {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package InterfaceAndAbstractClasses.TurnipFairyTale;
+package OOPSample.TurnipFairyTale;
 
 import java.util.ArrayList;
 import java.util.List;

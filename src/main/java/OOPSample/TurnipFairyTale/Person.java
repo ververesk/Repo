@@ -1,4 +1,4 @@
-package InterfaceAndAbstractClasses.TurnipFairyTale;
+package OOPSample.TurnipFairyTale;
 
 public class Person implements RepkaItem{
     private String name;

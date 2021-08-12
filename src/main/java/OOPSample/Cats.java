@@ -1,4 +1,4 @@
-package InstanceofSample;
+package OOPSample;
 
 
 import java.util.Scanner;

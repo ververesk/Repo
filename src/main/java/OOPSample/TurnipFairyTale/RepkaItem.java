@@ -1,4 +1,4 @@
-package InterfaceAndAbstractClasses.TurnipFairyTale;
+package OOPSample.TurnipFairyTale;
 
 public interface RepkaItem {
     String getNamePadezh();
