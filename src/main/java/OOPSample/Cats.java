@@ -20,7 +20,7 @@ public class Cats {
             Cat cat;
             switch (key) {
                 case "vaska":
-                    cat=new MaleCat("Василий");
+                    cat=new MaleCat("Вася");
                     break;
                 case "murka":
                     cat=new FemaleCat("Мурочка");
