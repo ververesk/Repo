@@ -23,7 +23,7 @@ public class Cats {
                     cat=new MaleCat("Вася");
                     break;
                 case "murka":
-                    cat=new FemaleCat("Мурка");
+                    cat=new FemaleCat("Мурочка");
                     break;
                 case "kiska":
                     cat=new FemaleCat("Кисуня");
