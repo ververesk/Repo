@@ -1,5 +1,5 @@
 package udemy.generics;
-
+//в рантайм вся инфа о дженериках стирается
 public class ParameterizedClass2 {
     public static void main(String[] args) {
         Pair<String, Integer> pair1=new Pair<>("privet",20);
@@ -28,17 +28,21 @@ class Pair<V1, V2> {
 }
 
 class OtherPair<V> {
-    private V value1;
-    private V value2;
+    private V value3;
+    private V value4;
 
-    public OtherPair(V value1, V value2) {
-        this.value1 = value1;
-        this.value2 = value2;
+    public V abc(V value) {
+        return value;
+    }
+
+    public OtherPair(V value3, V value4) {
+        this.value3 = value3;
+        this.value4 = value4;
     }
     public V getFirstValue() {
-        return value1;
+        return value3;
     }
     public V getSecondValue() {
-        return value2;
+        return value4;
     }
 }
