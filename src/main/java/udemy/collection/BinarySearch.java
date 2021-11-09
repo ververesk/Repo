@@ -1,9 +1,8 @@
 package udemy.collection;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
+import OOPSample.CorrectConclusion;
+
+import java.util.*;
 
 public class BinarySearch {
     public static void main(String[] args) {
@@ -23,7 +22,7 @@ public class BinarySearch {
         int index=Collections.binarySearch(arrayList, 12);
 
         Employee emp1=new Employee(100, "Zaur", 12345);
-        Employee emp2=new Employee(10, "Igor", 1245);
+        Employee emp2=new Employee(100, "Igor", 1245);
         Employee emp3=new Employee(200, "Maria", 1245);
         Employee emp4=new Employee(50, "Sergei", 42345);
         Employee emp5=new Employee(2, "Kolya", 235545);
@@ -38,11 +37,23 @@ public class BinarySearch {
         employeeList.add(emp6);
         employeeList.add(emp7);
         System.out.println(employeeList);
+        Collections.sort(employeeList);
+        System.out.println(employeeList);
+        int index2=Collections.binarySearch(employeeList, new Employee(50, "Sergei", 42345)); //нахожим на каком индексе находится работник с заданными параметрами
+        System.out.println(index2);
+
+        int[] array= {1,3,5,3,67,24,78,34,7,8,214,65,3};
+        Arrays.sort(array);
+        System.out.println(Arrays.toString(array));
+        int index3=Arrays.binarySearch(array,3);
+        System.out.println(index3);
+        Collections.reverse(employeeList);
+        System.out.println(employeeList);
 
     }
 }
 
-class Employee {
+class Employee implements Comparable<Employee> {
     int id;
     String name;
     int salary;
@@ -60,5 +71,14 @@ class Employee {
                 ", name='" + name + '\'' +
                 ", salary=" + salary +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Employee anotherEmployee) {
+       int result=this.id-anotherEmployee.id;
+       if(result==0) {
+           result = this.name.compareTo(anotherEmployee.name);
+       }
+       return result;
     }
 }
