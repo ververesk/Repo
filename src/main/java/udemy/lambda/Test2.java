@@ -6,7 +6,11 @@ public class Test2 {
     }
 
     public static void main(String[] args) {
-        def((String s) -> s.length());
+        int i=10; //i должна быть либо final либо ее значение дольще нигде не должно меняться
+        def((String s) -> {
+            System.out.println(i);
+            return s.length();
+        });
     }
 }
 

@@ -1,7 +1,10 @@
 package udemy.lambda;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class StudentInfo {
     void testStudents(List<Student> students, StudentChecks sc) {
@@ -11,31 +14,8 @@ public class StudentInfo {
             }
         }
     }
-
-//    void printStudentsOverGrade(List<Student> a1, double grade) {
-//        for (Student st : a1) {
-//            if(st.avgGrade>grade) {
-//                System.out.println(st);
-//            }
-//        }
-//    }
-//
-//    void printStudentsUnderGrade(List<Student> a1, int age) {
-//        for (Student st : a1) {
-//            if(st.age>age) {
-//                System.out.println(st);
-//            }
-//        }
-//    }
-//
-//    void printStudentsMixCondition(List<Student> a1, int age, double grade, char sex) {
-//        for (Student st : a1) {
-//            if(st.age>age && st.avgGrade<grade && st.sex==sex) {
-//                System.out.println(st);
-//            }
-//        }
-//    }
 }
+
 
 class Test {
     public static void main(String[] args) {
@@ -52,24 +32,15 @@ class Test {
         students.add(st5);
 
         StudentInfo info = new StudentInfo();
-//        info.testStudents(students, new CheckOverGrade());
-//        System.out.println("_______________________________________");
-//        info.testStudents(students, new StudentChecks() {
-//            @Override
-//            public boolean chek(Student s) {
-//                return s.age<30;
-//            }
-//        });
+        Collections.sort(students, (o1, o2) -> o1.course-o2.course);
+        System.out.println(students);
         info.testStudents(students, (Student s) -> s.avgGrade > 8);
         System.out.println("_______________________________________");
         info.testStudents(students, (Student s) -> s.sex == 'f');
         System.out.println("_______________________________________");
-        info.testStudents(students, (Student s) -> s.age > 25 && s.avgGrade > 8.0);
-//        info.printStudentsOverGrade(students, 8);
-//        System.out.println("_________________________________");
-//        info.printStudentsUnderGrade(students, 30);
-//        System.out.println("_________________________________");
-//        info.printStudentsMixCondition(students, 20,9.0,'f');
+        info.testStudents(students,  s -> s.age > 25 && s.avgGrade > 8.0); //можно писать и так
+        StudentChecks st=(Student s) -> s.sex == 'f'; //можно и так
+        info.testStudents(students,st);
     }
 }
 
