@@ -2,6 +2,7 @@ package udemy.stream;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -18,6 +19,16 @@ public class FilterEx {
         students.add(st3);
         students.add(st4);
         students.add(st5);
+
+
+        students.stream()
+                .map(element -> {
+                     element.setName(element.getName().toUpperCase());
+                     return element;
+                })
+                .filter(element ->element.getSex()=='f')
+                .sorted((x,y) -> x.getAge()-y.getAge())
+                .forEach(System.out::println);
 
         students = students.stream()
                 .sorted((x,y)->x.getName().compareTo(y.getName()))
