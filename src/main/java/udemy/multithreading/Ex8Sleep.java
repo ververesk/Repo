@@ -1,6 +1,5 @@
 package udemy.multithreading;
 
-import java.sql.SQLOutput;
 
 public class Ex8Sleep extends Thread{
     public void run() {
