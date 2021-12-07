@@ -70,6 +70,8 @@ class RunnableImplMobile implements Runnable {
     public void run() {
         new Ex12Synch().mobileCall();
     }
+
+
 }
 
 class RunnableImplSkype implements Runnable {
@@ -78,6 +80,8 @@ class RunnableImplSkype implements Runnable {
     public void run() {
         new Ex12Synch().skypeCall();
     }
+
+
 }
 
 class RunnableImplWhatsapp implements Runnable {
@@ -86,5 +90,7 @@ class RunnableImplWhatsapp implements Runnable {
     public void run() {
         new Ex12Synch().whatsappCall();
     }
+
+
 }
 

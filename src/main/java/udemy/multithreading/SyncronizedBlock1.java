@@ -27,7 +27,8 @@ class MyRunnableImpl2 implements Runnable {
     }
     private void doWork1() {
         doWork2();
-        synchronized (this) { //обьект (или название класса)на котором мы будем синхронизироваться
+        synchronized (this) {
+            System.out.println(this);//обьект (или название класса)на котором мы будем синхронизироваться
             Counter2.count++;
             System.out.println(Counter2.count);
         }
@@ -38,5 +39,10 @@ class MyRunnableImpl2 implements Runnable {
         for (int i = 0; i < 3; i++) {
             doWork1();
         }
+    }
+
+    @Override
+    public String toString() {
+        return "MyRunnableImpl2{}";
     }
 }
