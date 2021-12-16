@@ -21,6 +21,7 @@ class Market{
     private  int breadCount = 0;
 
     public synchronized void getBread() {
+        System.out.println(this);
         while (breadCount<1) {
             try {
                 wait();
@@ -31,10 +32,11 @@ class Market{
         breadCount--;
         System.out.println("Потребитель купил один хлеб");
         System.out.println("Количество хлеба в магазине = " + breadCount);
-        notify(); //сообщаем продюсера количество хлеба уменьшилось добавляй хлеб
+        notify(); //сообщаем продюсер количество хлеба уменьшилось добавляй хлеб
     }
 
     public synchronized void putBread() {
+        System.out.println(this);
         while (breadCount>=5) {
             try {
                 wait();
