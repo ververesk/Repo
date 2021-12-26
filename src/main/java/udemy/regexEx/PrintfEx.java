@@ -12,7 +12,7 @@ public class PrintfEx {
     %,.1f .1 - округляем до одного символа после запятой
      */
     public static void main(String[] args) {
-        Employee emp1 = new Employee(1, "Veronka", "Grigorovich", 12345, 0.15);
+        Employee emp1 = new Employee(1, "Veronika", "Grigorovich", 12345, 0.15);
         Employee emp2 = new Employee(15, "Ivan", "Petrov", 6542, 0.05);
         Employee emp3 = new Employee(1123, "Maria", "Sidorova", 8542, 0.12);
         employeeInfo(emp1);
