@@ -1,6 +1,8 @@
 package udemy.annotation_ex;
 
 import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 public class Employee {
@@ -23,7 +25,8 @@ public class Employee {
                 ", salary=" + salary +
                 '}';
     }
-    @Target(ElementType.METHOD) //только для метода
+    @Target({ElementType.METHOD, ElementType.TYPE})
+    @Retention(RetentionPolicy.RUNTIME)  //жизненный цикл аннотации
     @interface MyAnnotation{
 
     }
