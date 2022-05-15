@@ -47,7 +47,7 @@ class Test {
 //        System.out.println("_______________________________________");
 //        info.testStudents(students,  s -> s.age > 25 && s.avgGrade > 8.0); //можно писать и так
         double result=avgOfSmth(students, student -> student.avgGrade);
-        System.out.println(result);
+        System.out.println("average "+result);
 
     }
     private static double avgOfSmth(List<Student> students, Function<Student, Double> function) {
